@@ -2,23 +2,23 @@ package com.betow.mymoviesapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.betow.mymoviesapp.databinding.ActivityMainBinding
+import com.betow.mymoviesapp.databinding.ActivityMovieDetailsBinding
 
 
-class MainActivity : AppCompatActivity() {
+class DetailsMovieActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMovieDetailsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
     }
 
     private fun initLayout(){
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
     }
