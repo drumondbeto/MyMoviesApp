@@ -11,14 +11,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+    }
+
+    private fun initLayout(){
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-
-        println(ehUmBomFilme("Vingadores:Endgame"))
-        criarNumeros()
     }
 
     fun ehUmBomFilme(filme: String?):String {
