@@ -14,7 +14,7 @@ class DetailsMovieActivity : AppCompatActivity() {
         binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.tvTitle.text = "Your Name"
     }
 
     private fun initLayout(){

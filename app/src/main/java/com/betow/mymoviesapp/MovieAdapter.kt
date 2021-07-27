@@ -7,7 +7,7 @@ import com.betow.mymoviesapp.databinding.MovieItemBinding
 
 class MovieViewHolder(val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root)
 
-class MovieAdapter :
+class MovieAdapter(val movieClickListener:()->Unit) :
     RecyclerView.Adapter<MovieViewHolder>() {
     val movieList: MutableList<String> = mutableListOf()
 
@@ -20,6 +20,9 @@ class MovieAdapter :
     override fun onBindViewHolder(viewHolder: MovieViewHolder, position: Int) {
         val item = movieList[position]
         viewHolder.binding.titulo = item
+        viewHolder.binding.itemBackground.setOnClickListener{
+            movieClickListener()
+        }
     }
     override fun getItemCount() = movieList.size
 
